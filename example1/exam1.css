@@ -1,10 +1,7 @@
-.number-wrap {
-    margin:0 5px;
-}
 .btn-wrap {
     overflow:  hidden;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 .btn-wrap > button {
     background: #acacac;
