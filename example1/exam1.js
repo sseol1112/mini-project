@@ -13,14 +13,15 @@ function startGame(){
         if (inputNumber === 'q') break
         attempts++
         if(inputNumber < randomNumber) {
-            inputNumber = prompt("입력된 수는 지정 값보다 이하입니다. 다시 입력해주세요")
+            inputNumber = prompt("지정 값보다 작습니다. 큰 값을 입력해주세요.")
         } else if (inputNumber > randomNumber) {
-            inputNumber = prompt("입력된 수는 지정 값보다 이상입니다. 다시 입력해주세요") 
+            inputNumber = prompt("지정 값보다 큽니다. 작은 값을 입력해주세요.") 
         }
     }
 
     if(inputNumber === 'q' ){
         alert("게임을 종료합니다. 안녕히 가세요-!");
+        document.getElementById('result').innerText = " 정답은 " + randomNumber + " 입니다.";
     }else {
         if (inputNumber == randomNumber ){
             alert(`정답입니다. ${attempts} 번 만에 성공하였습니다.`);

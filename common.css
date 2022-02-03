@@ -1,9 +1,9 @@
+.section {
+    max-width: 1024px;
+    margin: 0 auto;
+}
 a{
     text-decoration: none;
-}
-.article{
-    width: 1024px;
-    margin: 0 auto;
 }
 ul{
     list-style: none;
