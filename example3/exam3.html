@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="/example3/exam3.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/example3/exam3.js"></script>
+</head>
+<body>
+    <div class="section">
+        <h1>계산기</h1>
+        <p>계산 하고자 하는 연산자를 선택하세요.</p>
+        <div class="btn-wrap">
+            <button class="btn plus" data-type="+">+</button>
+            <button class="btn minus" data-type="-">-</button>
+            <button class="btn multiply" data-type="*">×</button>
+            <button class="btn divide" data-type="/">÷</button>
+            <button class="btn remain" data-type="%">%</button>
+        </div>
+        <div class="result-wrap">
+            <p>결과값 : <span class="total"></span></p>
+        </div>
+    </div>
+    <div class="footer">
+        <button onclick="location.href='../index.html'">목록보기</button>
+    </div>
+    
+</body>
+</html>

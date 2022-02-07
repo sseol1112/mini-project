@@ -6,10 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>example2</title>
     <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="../example2/exam2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../example2/exam2.js"></script>
+
 </head>
 <body>
     <div class="section">
-        <h1>예제2</h1>
+        <h1>Vanila Script Example.</h1>
+        <div id="q1">
+            <button onclick="carNameTest();">객체리터럴 예제</button>
+            <div id="a1">
+                <p></p>
+            </div>
+        </div>
+        <div id="q2">
+            <button onclick="changing();">값카운트 예제 (+ 10)</button>
+            <button onclick="javascript:;" id="resetBtn">reset</button>
+            <div id="a2">
+                <p>0</p>
+                <div class="result"></div>
+            </div>
+        </div>
+
     </div>
     <div class="footer">
         <button onclick="location.href='../index.html'">목록보기</button>

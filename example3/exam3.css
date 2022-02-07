@@ -1,0 +1,13 @@
+.btn-wrap{
+    display: flex;
+    justify-content: center;
+    margin:10px 0;
+
+}
+.btn-wrap .btn{
+    width: 20%;
+    background-color: beige;
+    color:#888;
+    border-color: #888;
+    margin:0 10px;
+}

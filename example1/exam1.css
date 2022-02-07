@@ -1,7 +1,7 @@
 .btn-wrap {
     overflow:  hidden;
     display: flex;
-    justify-content: flex-end;
+    justify-content:center;
 }
 .btn-wrap > button {
     background: #acacac;

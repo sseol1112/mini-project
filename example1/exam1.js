@@ -15,7 +15,7 @@ function startGame(){
         if(inputNumber < randomNumber) {
             inputNumber = prompt("지정 값보다 작습니다. 큰 값을 입력해주세요.")
         } else if (inputNumber > randomNumber) {
-            inputNumber = prompt("지정 값보다 큽니다. 작은 값을 입력해주세요.") 
+            inputNumber = prompt("지정 값보다 큽니다. 작은 값을 입력해주세요.")
         }
     }
 

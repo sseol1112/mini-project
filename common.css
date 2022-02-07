@@ -8,15 +8,17 @@ a{
 ul{
     list-style: none;
     padding: 0;
+    border-top:1px solid #333;
 }
 ul li {
-    border-bottom: 1px solid #333;
+    
     
 }
 ul li a {
     color:#333;
     display: block;
-    padding:10px 0;
+    padding:10px 5px;
+    border-bottom: 1px solid #333;
 }
 ul li a:hover{
     color:#fff;
@@ -32,5 +34,10 @@ button {
     border-radius: 10px;
     padding:10px;
     font-weight: bold;
-    margin:0 10px;
+    cursor: pointer;
+}
+
+.footer button {
+    color:#fff;
+    background:#333;
 }

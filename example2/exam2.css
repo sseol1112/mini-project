@@ -1,0 +1,6 @@
+#a2 {
+    display: inline-block;
+}
+#a2 p, #a2 .result{
+    display: inline-block;
+}
