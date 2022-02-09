@@ -1,0 +1,59 @@
+.memo {
+    text-align: center;
+}
+.btn-wrap {
+    display: flex;
+    justify-content: center;
+    margin:10px 0;
+}
+.btn-wrap button {
+    margin:0 10px;
+}
+.text-wrap {
+    display: flex;
+    justify-content: center;
+    margin:10px 0;
+}
+#txtBox {
+    background-color: #faffd0;
+    border: 0;
+    padding:10px;
+}
+#info {
+    color:#00f;
+}
+.btn-wrap #regBtn{
+    background:powderblue;
+}
+.btn-wrap #viewMemo {
+    background: #acacac;
+}
+.memo-area {
+    border:0;
+    padding: 0;
+    margin: 0;
+}
+.memo-area li{
+    border-top:1px solid #333;
+    width: 400px;
+    height: auto;
+    margin: 20px auto;
+    background-color: #faffd0;
+    padding:5px;
+    text-align: left;
+    white-space: pre-line;
+}
+.memo-area li p.txt {
+    margin:23px 0;
+    word-break: break-all;
+    
+}
+.memo-view {
+    display: none;
+}
+
+.footer button {
+    margin: 0 10px;
+    border: 0;
+
+}

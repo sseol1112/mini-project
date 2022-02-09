@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="section memo">
+        <h3>메모장<br>(localStorage 활용)</h3>
+        
+        <div class="text-wrap">
+            <textarea id="txtBox" cols="50" rows="20"></textarea><br/>
+        </div>
+        <div id="info" style="display:none;">작성한 내용이 자동 저장 되었습니다.</div>
+        <div id="noti" style="display:none;">값을 입력 하여 주세요</div>
+        <div class="btn-wrap">
+            <button id="clearBtn" class="btn">입력내용 초기화</button>
+            <button id="regBtn" class="btn">작성 메모 등록</button>
+            <button id="loadBtn" class="btn">자동 저장된<br>메모 불러오기</button>
+            <button id="viewMemo" class="btn">최근 작성<br> 메모 불러오기</button>            
+        </div>
+        <div class="memo-view">
+            <ul class="memo-area"></ul>
+        </div>
+    </div>
+    <div class="footer">
+        <button onclick="history.bakc();" class="btn">이전</button>
+        <button onclick="location.href='../index.html'">목록보기</button>
+    </div>
+</body>
+</html>
