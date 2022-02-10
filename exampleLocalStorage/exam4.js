@@ -7,7 +7,6 @@ var memo = {
     settings : function(){
         var self = this;
         self.$memos = [];
-        self.$memo = JSON.parse(localStorage.getItem("memo"));
         self.$memoBox = $('.memo');
         self.$footerBox = $('.footer');
         self.$textBox = self.$memoBox.find("#txtBox");
@@ -39,16 +38,6 @@ var memo = {
             memo.save();
         });
 
-        // self.$textBox.on('focus', function(){
-        //     self.$loadBtn.show();
-        //     self.$viewBtn.hide();
-        // })
-
-        // self.$textBox.on('blur', function(){
-        //     self.$loadBtn.hide();
-        //     self.$viewBtn.show();
-        // })
-
         self.$regMemoBtn.on('click', function(){
             if(!self.$textBox[0].value){
                 self.$infoBox.hide();
@@ -62,10 +51,11 @@ var memo = {
 
         //최근 작성 메모 불러오기
         self.$viewBtn.on('click', function(){
+            var $memo = JSON.parse(localStorage.getItem("memo"));
             var listLength = self.$viewMemoBox.find('ul.memo-area').children('li').length;
-            if( listLength > 0 && listLength == self.$memo.length){
+            if( listLength > 0 && listLength == $memo.length){
                 alert("최근 작성 메모를 모두 불러온 상태입니다.");
-            }else if(listLength != self.$memo.length){
+            }else if(listLength != $memo.length){
                 self.$viewMemoBox.find('ul.memo-area').children('li').remove();
                 memo.viewMemo();
             }else{
@@ -77,7 +67,7 @@ var memo = {
         // 선택 메모 삭제
         self.$viewMemoBox.on('click', '.del-btn', function(){
             $(this).closest('li').remove();
-            var text = $(this).closest('li').find('p').html();
+            //var text = $(this).closest('li').find('p').html();
             // console.log(text);
             // memo.delMemo(text);
         });        
@@ -145,23 +135,16 @@ var memo = {
         var self = this;
         var html = '';
         var memoData = JSON.parse(localStorage.getItem("memo"));
-        var memoArray = '' 
+        var memoArray = []; 
 
         if(!memoData){
             self.$viewMemoBox.hide();
             alert("저장된 메모가 없습니다.");
         }else{
             memoArray = memoData.splice(','); // , 기준으로 배열을 나눈다.
-            if(memoArray.length > 1){
-                for(var i=0; i<memoArray.length; i++){
-                    html += '<li style="position:relative;">';
-                    html += '<p class="txt">' + memoArray[i] + '</p>';
-                    html += '<button class="del-btn" style="float:right; padding:0 5px; position:absolute; top:5px; right:5px;">x</button>';
-                    html += '</li>';
-                }
-            } else {
+            for(var i=0; i<memoArray.length; i++){
                 html += '<li style="position:relative;">';
-                html += '<p class="txt">' + viewMemo + '</p>';
+                html += '<p class="txt">' + memoArray[i] + '</p>';
                 html += '<button class="del-btn" style="float:right; padding:0 5px; position:absolute; top:5px; right:5px;">x</button>';
                 html += '</li>';
             }
@@ -190,7 +173,6 @@ var memo = {
     },
     btnCheck : function() {
         var self = this;
-        //localStorage 변수
         var autoSaveData = localStorage.getItem('autosave');
         var memoData = JSON.parse(localStorage.getItem('memo'));
         if(!autoSaveData){
