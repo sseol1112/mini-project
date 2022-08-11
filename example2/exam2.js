@@ -26,6 +26,7 @@ function test() {
 
 function carNameTest() { //객체 리터럴 테스트
     let answer1 = document.getElementById("a1");
+    //객체 리터럴
     let carName = { 
         manyCars : {
             a:"Sonata",

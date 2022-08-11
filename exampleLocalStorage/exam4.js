@@ -67,7 +67,7 @@ var memo = {
         // 선택 메모 삭제
         self.$viewMemoBox.on('click', '.del-btn', function(){
             $(this).closest('li').remove();
-            //var text = $(this).closest('li').find('p').html();
+            // var text = $(this).closest('li').find('p').html();
             // console.log(text);
             // memo.delMemo(text);
         });        

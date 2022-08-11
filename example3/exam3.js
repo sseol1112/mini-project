@@ -1,9 +1,10 @@
 $(document).ready(function(){
     $('.result-wrap').hide();
     $('.btn-wrap .btn').click(function(){
-        var btnVal = $(this).text();
+        // data 속성으로 값추출해도 되고, text값으로 받아도 되나, 속성값으로 처리하였음
+        //var btnVal = $(this).text();
         var btnDataVal = $(this).data("type");
-        console.log("테스트: " + btnVal + ", DATA-Val: " + btnDataVal);
+        console.log("data-type : " + btnDataVal);
 
         accountData(btnDataVal);
     });
